@@ -29,18 +29,7 @@ function Tips() {
                             It’s called a zero-based budget. Now that doesn’t mean you have zero dollars in your bank
                             account
                             It just means your income minus all your expenses equals zero.</p>
-                        <h3 className="display 5 text-center">Do the budget together.</h3>
-                        <br/>
-                            <p className="text-center">If you’re married, sit down once a month and have a family
-                                budgeting night.
-                                Make it fun! Grab some of your favorite snacks and put on a good playlist to help you
-                                focus.
-                                You need to get on the same page with money, so set goals together and dream about what
-                                the future will look like.
-                                Remember: If the two of you are one, your bank accounts should be one too! It’s no
-                                longer your money or my money—it’s our money.
-                                And if you’re single, find someone who can act as your accountability partner and help
-                                you stick to your goals!</p>
+
                             <br/>
                                 <h3 className="display 5 text-center">Remember that every month is different.</h3>
                                 <br/>
@@ -67,15 +56,7 @@ function Tips() {
                                                 are taken care of,
                                                 you can fill in the rest of the categories in your budget.</p>
                                             <br/>
-                                                <h3 className="display 5 text-center">Pay off your debt.</h3>
-                                                <br/>
-                                                    <p className="text-center">If you have debt, paying it off needs to
-                                                        be a top priority.
-                                                        Use the debt snowball method and the 7 Baby Steps to get rid of
-                                                        debt as fast as you can.
-                                                        Attack it! Get mad at it! Stop letting debt rob you of the very
-                                                        thing that helps you win with money—your income.</p>
-                                                    <br/>
+
                                                         <h3 className="display 5 text-center">Don’t be afraid to trim
                                                             the budget.</h3>
                                                         <br/>

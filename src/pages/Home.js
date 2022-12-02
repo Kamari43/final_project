@@ -6,9 +6,11 @@ function Home() {
                     <h1 className="display 3 text-center">Tipnit</h1><br/><br/>
                     <img src="" alt="" width="" height=""/><br/>
                         <h3 className="display 5">A little about Tipnit</h3><br/>
-                        <p>A successful budget planner helps you decide how to best spend your money while avoiding or reducing debt.
-                            Tipnit recommends the 50/30/20 budget, which suggests that 50% of your income goes toward needs,
-                            30% toward wants and 20% toward savings and debt repayment. Your remaining amount will be your savings.
+                        <p>TipNit wants to help famu students with their financial woes. With the TipNit app famu students will be able to keep track of their money spending.
+                            You may determine how much you spend each month and how much you can save by providing information about your income and expenses.
+                            Now you would have a clearer understanding of where you are and whether you are content with your financials.
+                            If you're not satisfied with your current situation, our Tips page offers advice on how to improve your finances.
+                            If you still need assistance or have suggestions after reading our help page, don't forget to visit our comment page and post them there.
                         </p>
                 </div>
             </section>

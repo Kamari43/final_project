@@ -1,26 +1,19 @@
 function About() {
     return (
         <>
-            <section id="Tipnit">
+
                 <div className="container">
                     <h1 className="display 3 text-center">Tipnit</h1><br/><br/>
-                    <img src="" alt="" width="" height=""/><br/>
-                    <h3 className="display 5">A little about Tipnit</h3><br/>
-                    <p>A successful budget planner helps you decide how to best spend your money while avoiding or reducing debt.
-                        Tipnit recommends the 50/30/20 budget, which suggests that 50% of your income goes toward needs,
-                        30% toward wants and 20% toward savings and debt repayment. Your remaining amount will be your savings.
-                    </p>
                 </div>
-            </section>
     <section id="TheAuthors">
 
         <div className="container">
-            <h4 className="display 5">The Founders</h4><br/>
+            <h4 className="display 5 text-center">The Founders</h4><br/>
 
 
             <div className="card-group">
                 <div className="card">
-                    <img src="images/Marthe2.jpeg" height="520" width="200" className="card-img-top" alt="Marthe Edme"/>
+                    <img src="images/Marthe.jpeg" height="520" width="200" className="card-img-top" alt="Marthe Edme"/>
                         <div className="card-body">
                             <h5 className="card-title">Biography</h5>
                             <p className="card-text"> Marthe is a Haitian America, born and raised in Haiti.
