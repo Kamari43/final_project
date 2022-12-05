@@ -5,7 +5,7 @@
 *	Wireframes
 ## Overview
 ### Description
-A web that calculates your monthly expense based on necessary basis by considering your lifestyle. It is used for students to have an idea how much they required a month and whether they need aid. It would help them to keep track off their budget and unnecessary spending.
+The purpose of TipNit is to make Famu students step back and take a look at where you at financially. By asking for your income and expenses you are able to see how much you are spending in a month and how much you are able to save. It would give you a better view on where you are, if you're happy with it or not.
 ## App Evaluation
 ###	Category 
 Informative
