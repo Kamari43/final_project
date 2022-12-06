@@ -29,13 +29,14 @@ package com.example.table.Controller;
 import com.example.table.Model.Parse.UserInfo;
 import com.example.table.Model.Serialiazable.SerializableUserInfo;
 import com.example.table.Service.UserInfoService;
+import org.parse4j.ParseException;
 import org.parse4j.ParseUser;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.text.ParseException;
+import java.util.HashMap;
 
 @RestController
 @RequestMapping("/api/v1/userinfo")
@@ -52,6 +53,24 @@ public class UserInfoController {
         return userService.addUser(user);
     }
 
-   
+    @GetMapping("/login")
+    public SerializableUserInfo logIn(@RequestBody HashMap<String,String> obj){
+SerializableUserInfo info = null;
+        try {
+
+
+            ParseUser user = ParseUser.logIn("kamari", "password");
+
+            if(info != null) {
+                info.setUserName(user.getUsername());
+            }
+
+        } catch (ParseException e) {
+            throw new RuntimeException(e);
+        }
+
+        return info;
+
+    }
 
 }
