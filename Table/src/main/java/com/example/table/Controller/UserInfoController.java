@@ -25,16 +25,13 @@ public class UserInfoController {
 }
 */
 package com.example.table.Controller;
-
 import com.example.table.Model.Parse.UserInfo;
 import com.example.table.Model.Serialiazable.SerializableUserInfo;
 import com.example.table.Service.UserInfoService;
 import org.parse4j.ParseException;
 import org.parse4j.ParseUser;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+
+import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
 
@@ -49,19 +46,22 @@ public class UserInfoController {
     }
 
     @GetMapping("/")
-    public String createUser(@RequestBody SerializableUserInfo user){
+    public String createUser(@RequestBody SerializableUserInfo user) {
         return userService.addUser(user);
     }
 
-    @GetMapping("/login")
-    public SerializableUserInfo logIn(@RequestBody HashMap<String,String> obj){
-SerializableUserInfo info = null;
+
+
+
+  /*  @GetMapping("/login")
+    public SerializableUserInfo logIn(@RequestBody HashMap<String, String> obj) {
+        SerializableUserInfo info = null;
         try {
 
 
             ParseUser user = ParseUser.logIn("kamari", "password");
 
-            if(info != null) {
+            if (info != null) {
                 info.setUserName(user.getUsername());
             }
 
@@ -73,4 +73,32 @@ SerializableUserInfo info = null;
 
     }
 
+    @GetMapping("/signup")
+    public SerializableUserInfo signUp(@RequestBody HashMap<String, String> obj) {
+        SerializableUserInfo info = null;
+
+        ParseUser user = new ParseUser();
+        user.setUsername("my name");
+        user.setPassword("my pass");
+        user.setEmail("email@example.com");
+
+        user.signUp
+
+                 {
+            public void done(ParseException e) {
+                if (e == null) {
+                    // Hooray! Let them use the app now.
+                } else {
+                    // Sign up didn't succeed. Look at the ParseException
+                    // to figure out what went wrong
+                }
+            }
+        });
+
+
+        return signUp;
+
+    }
+
+   */
 }
