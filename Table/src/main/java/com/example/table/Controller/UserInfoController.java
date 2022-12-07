@@ -53,7 +53,7 @@ public class UserInfoController {
 
 
 
-  /*  @GetMapping("/login")
+   @GetMapping("/login")
     public SerializableUserInfo logIn(@RequestBody HashMap<String, String> obj) {
         SerializableUserInfo info = null;
         try {
@@ -73,32 +73,25 @@ public class UserInfoController {
 
     }
 
-    @GetMapping("/signup")
+    @PostMapping("/register")
     public SerializableUserInfo signUp(@RequestBody HashMap<String, String> obj) {
         SerializableUserInfo info = null;
 
         ParseUser user = new ParseUser();
-        user.setUsername("my name");
-        user.setPassword("my pass");
-        user.setEmail("email@example.com");
+        user.setUsername(obj.get("username"));
+        user.setPassword(obj.get("password"));
+        user.setEmail(obj.get("email@example.com"));
 
-        user.signUp
-
-                 {
-            public void done(ParseException e) {
-                if (e == null) {
-                    // Hooray! Let them use the app now.
-                } else {
-                    // Sign up didn't succeed. Look at the ParseException
-                    // to figure out what went wrong
-                }
-            }
-        });
+        try {
+            user.signUp();
+        } catch (ParseException e) {
+            throw new RuntimeException(e);
+        }
 
 
-        return signUp;
+        return info;
 
     }
 
-   */
+
 }
