@@ -29,6 +29,9 @@ public class SerializableUserInfo {
 */
 package com.example.table.Model.Serialiazable;
 
+import lombok.NoArgsConstructor;
+
+@NoArgsConstructor
 public class SerializableUserInfo {
     private String name;
     private String phoneNumber;
