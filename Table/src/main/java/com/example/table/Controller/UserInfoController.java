@@ -25,7 +25,6 @@ public class UserInfoController {
 }
 */
 package com.example.table.Controller;
-import com.example.table.Model.Parse.UserInfo;
 import com.example.table.Model.Serialiazable.SerializableUserInfo;
 import com.example.table.Service.UserInfoService;
 import org.parse4j.ParseException;
@@ -53,25 +52,34 @@ public class UserInfoController {
 
 
 
+
    @GetMapping("/login")
+
+   @PostMapping ("/login")
+
     public SerializableUserInfo logIn(@RequestBody HashMap<String, String> obj) {
-        SerializableUserInfo info = null;
-        try {
+
+       SerializableUserInfo info = new SerializableUserInfo();
+
+       ParseUser user = null;
+       try {
+           user = ParseUser.logIn(obj.get("username"), obj.get("password"));
+           if(user== null) {
+
+           }else {
+
+           }
+       } catch (ParseException e) {
+           throw new RuntimeException(e);
+       }
 
 
-            ParseUser user = ParseUser.logIn("kamari", "password");
 
-            if (info != null) {
-                info.setUserName(user.getUsername());
-            }
-
-        } catch (ParseException e) {
-            throw new RuntimeException(e);
-        }
 
         return info;
 
     }
+
 
     @PostMapping("/register")
     public SerializableUserInfo signUp(@RequestBody HashMap<String, String> obj) {
