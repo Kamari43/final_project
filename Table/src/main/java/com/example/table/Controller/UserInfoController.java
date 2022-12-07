@@ -25,7 +25,6 @@ public class UserInfoController {
 }
 */
 package com.example.table.Controller;
-import com.example.table.Model.Parse.UserInfo;
 import com.example.table.Model.Serialiazable.SerializableUserInfo;
 import com.example.table.Service.UserInfoService;
 import org.parse4j.ParseException;
@@ -53,52 +52,28 @@ public class UserInfoController {
 
 
 
-  /*  @GetMapping("/login")
+   @PostMapping ("/login")
     public SerializableUserInfo logIn(@RequestBody HashMap<String, String> obj) {
-        SerializableUserInfo info = null;
-        try {
+
+       SerializableUserInfo info = new SerializableUserInfo();
+
+       ParseUser user = null;
+       try {
+           user = ParseUser.logIn(obj.get("username"), obj.get("password"));
+           if(user== null) {
+
+           }else {
+
+           }
+       } catch (ParseException e) {
+           throw new RuntimeException(e);
+       }
 
 
-            ParseUser user = ParseUser.logIn("kamari", "password");
 
-            if (info != null) {
-                info.setUserName(user.getUsername());
-            }
-
-        } catch (ParseException e) {
-            throw new RuntimeException(e);
-        }
 
         return info;
 
     }
 
-    @GetMapping("/signup")
-    public SerializableUserInfo signUp(@RequestBody HashMap<String, String> obj) {
-        SerializableUserInfo info = null;
-
-        ParseUser user = new ParseUser();
-        user.setUsername("my name");
-        user.setPassword("my pass");
-        user.setEmail("email@example.com");
-
-        user.signUp
-
-                 {
-            public void done(ParseException e) {
-                if (e == null) {
-                    // Hooray! Let them use the app now.
-                } else {
-                    // Sign up didn't succeed. Look at the ParseException
-                    // to figure out what went wrong
-                }
-            }
-        });
-
-
-        return signUp;
-
-    }
-
-   */
 }
